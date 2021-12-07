@@ -9,15 +9,15 @@
 	
 </head>
 <body>
-	<div class="app">
+	<div class="app">		
 		<div id="counter" class="card">
+				<h1>To do list</h1>
 			<input v-on:keyup.enter="addToList()" v-model="message" placeholder="add elements here">
 			<ol>
 				<li v-for="elemente in lista">
-					{{elemente}}
+					{{elemente}} <span><button>Delete</button></span>
 				</li>
 			</ol>
-			<a v-bind:href="url">get current url</a>
 			<button v-on:click="addToList()">Click to add</button>
 		</div>
 	</div>

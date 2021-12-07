@@ -4,8 +4,7 @@ const Counter = {
       counter: 0,
       message: "",
       seen: true,
-      lista: ["ceva", "altceva", "si nimic"],
-      url: window.location.href
+      lista: ["ceva", "altceva", "si nimic"]
     };
   },
   mounted() {
@@ -23,14 +22,6 @@ const Counter = {
         this.lista.push(this.message);
         this.message = "";
       }
-    },
-    question() {
-      let s = "";
-      let a = "11120315841";
-      for (let i = 1; i < a.length(a); i++) {
-        if (a[i] % 2 === a[i - 1] % 2) s += Math.max(a[i], a[i - 1]);
-      }
-      console.log("www.multisoft.se/" + s);
     }
   }
 };
