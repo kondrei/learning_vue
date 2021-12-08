@@ -25,7 +25,7 @@
 						{{elemente}}
 					</li>
 				</ol>
-				<strong>{{totalList}}</strong><br />
+				<strong :class="totalList.class">{{totalList.text}}</strong><br />
 				<button v-on:click="addToList()">Click to add</button>
 			</div>
 		</div>

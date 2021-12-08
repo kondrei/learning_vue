@@ -7,14 +7,6 @@ const Counter = {
 			lista: []
 		};
 	},
-	mounted() {
-		setInterval(() => {
-			this.counter++;
-		}, 1000);
-	},
-	created() {
-		console.log(this.seen);
-	},
 	methods: {
 		addToList() {
 			if (this.message === "") return;
@@ -26,10 +18,24 @@ const Counter = {
 	},
 	computed: {
 		totalList() {
-			let total = this.lista.length;
-			if (total <= 0) return "No elements";
-			return total + (total === 1 ? " element" : " elements");
+			let values = {
+				number: this.lista.length,
+				text: "",
+				class: ""
+			};
+
+			if (values.number <= 0) {
+				values.text = "No elements";
+				values.class = "error";
+			}
+			values.text =
+				values.number + (values.number === 1 ? " element" : " elements");
+
+			return values;
 		}
+	},
+	mounted() {
+		console.log("app loadet");
 	}
 };
 
