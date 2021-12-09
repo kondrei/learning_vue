@@ -21,8 +21,8 @@
           placeholder="add elements here"
         />
         <ul>
-          <li v-for="(elemente,index) in lista">
-            {{index}} - {{elemente}}
+          <li v-for="(books,index) in myBooks">
+            {{books}}
           </li>
         </ul>
         <strong :class="totalList.class">{{totalList.text}}</strong><br />

@@ -9,23 +9,27 @@ https://www.color-hex.com/color-palette/1147
 
 */
 body {
-	background-color: #f2f6c3;
+  background-color: #f2f6c3;
 }
 .app {
-	display: flex;
-	height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 .card {
-	background: #96ead7;
-	border-radius: 10px;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-	padding: 10px;
-	width: 200px;
-	height: auto;
+  background: #96ead7;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+  height: auto;
 }
 
 .error {
-	color: firebrick;
+  color: firebrick;
+}
+
+li {
+  list-style: none;
 }

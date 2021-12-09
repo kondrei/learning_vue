@@ -1,17 +1,17 @@
 const Counter = {
   data() {
     return {
+      myBooks: [{ id: 1, title: "Roata timpului" }],
       counter: 0,
       message: "",
-      seen: true,
-      lista: []
+      seen: true
     };
   },
   methods: {
     addToList() {
       if (this.message === "") return;
-      if (this.lista[this.lista.length - 1] !== this.message) {
-        this.lista.push(this.message);
+      if (this.myBooks[this.myBooks.length - 1] !== this.message) {
+        this.myBooks.push(this.message);
         this.message = "";
       }
     }
@@ -19,7 +19,7 @@ const Counter = {
   computed: {
     totalList() {
       let values = {
-        number: this.lista.length,
+        number: this.myBooks.length,
         text: "",
         class: ""
       };
