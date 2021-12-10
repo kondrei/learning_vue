@@ -21,12 +21,10 @@
 					placeholder="add elements here"
 				/>
 				<ul>
-					<!-- <li v-for="(books,index) in myBooks">
-            {{books}}
-          </li> -->
 					<books-list
-						v-for="(books,index) in myBooks"
-						:books="books"
+						v-for="(book,index) in myBooks"
+						:key="index"
+						:books="book"
 						@remove="myBooks.splice(index,1)"
 					>
 					</books-list>

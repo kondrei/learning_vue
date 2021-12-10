@@ -1,7 +1,7 @@
 const Counter = {
 	data() {
 		return {
-			myBooks: [],
+			myBooks: ["roata timpului", "dune"],
 			counter: 0,
 			message: "",
 			seen: true
@@ -41,15 +41,16 @@ const Counter = {
 };
 
 const app = Vue.createApp(Counter);
-const viewModel = app.mount("#counter");
 
 app.component("books-list", {
 	template: `
     <li>  
-      {{books}}
-      <button @click="$emit('remove')">Remove</button>
+      {{ books }}
+      <button v-on:click="$emit('remove')">Remove</button>
     </li>
   `,
 	props: ["books"],
 	emits: ["remove"]
 });
+
+const viewModel = app.mount("#counter");
