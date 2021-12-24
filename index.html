@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>learning vue</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="src/styles.css"
-    />
-  </head>
-  <body>
-    <div class="app">
-      <div id="counter" class="card">
-        <input
-          v-on:keyup.enter="addToList()"
-          v-model.trim.number="message"
-          placeholder="add elements here"
-        />
-        <ul>
-          <books-list
-            v-for="(book,index) in myBooks"
-            :key="index"
-            :books="book"
-            @remove="myBooks.splice(index,1)"
-          >
-          </books-list>
-        </ul>
-        <strong :class="totalList.class">{{totalList.text}}</strong><br />
-        <button v-on:click="addToList()">Click to add</button>
-      </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>learning vue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="src/styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <div v-if="show">
+      <p>{{title}} - {{author}} - {{age}}</p><br />
     </div>
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="src/index.js"></script>
-  </body>
+    <br>
+    <div>
+      <button>
+        <span v-if="show" @click="toggleShow">Hide box</span>
+        <span v-else @click="toggleShow">Show box</span>
+      </button>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@3.2.0"></script>
+  <script src="src/app.js"></script>
+</body>
+
 </html>
