@@ -1,35 +1,25 @@
-/* color palette
-https://www.color-hex.com/color-palette/1147
-#b8dbd3	(184,219,211)
-#f7e7b4	(247,231,180)
-#68c4af	(104,196,175)
-#96ead7	(150,234,215)
-#f2f6c3	(242,246,195)
-
-
-*/
 body {
-  background-color: #f2f6c3;
-}
-.app {
-  display: flex;
-  height: 100vh;
-}
-.card {
-  background: #96ead7;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 10px;
-  width: auto;
-  height: auto;
+  background: #ddd;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 1rem;
 }
 
-.error {
-  color: firebrick;
+p,h3,ul{
+  margin: 0;
+  padding: 0;
 }
 
 li {
   list-style: none;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li.fav {
+  background: #ff9ed2;
 }

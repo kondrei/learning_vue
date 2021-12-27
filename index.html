@@ -11,16 +11,20 @@
 
 <body>
   <div class="app">
+
+    <a :href="url">click here</a>
     <div v-if="show">
-      <p>{{title}} - {{author}} - {{age}}</p><br />
+      <ul>
+        <li v-for="(book, index) in books" :key="index" :class="{fav: book.isFav}" @click="markFav(index)">
+          <img :src="book.image" :alt="book.title">
+          <h3>{{book.title}}</h3>
+          <p>{{book.author}}</p>
+          <p>{{index}}</p>
+        </li>
+      </ul>
     </div>
+
     <br>
-    <div>
-      <button>
-        <span v-if="show" @click="toggleShow">Hide box</span>
-        <span v-else @click="toggleShow">Show box</span>
-      </button>
-    </div>
   </div>
   <script src="https://unpkg.com/vue@3.2.0"></script>
   <script src="src/app.js"></script>
